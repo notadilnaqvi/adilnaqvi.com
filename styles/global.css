@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+	@apply py-1 px-2 bg-blue-200 rounded-sm hover:bg-blue-300;
+}
