@@ -1,7 +1,18 @@
+import Link from 'next/link';
+
 export default function Error404() {
 	return (
 		<div className='w-full'>
-			<h1 className='text-xl mb-2'>This is the 404 page</h1>
+			<h1 className='text-2xl text-gray-700'>Error 404</h1>
+			<p className='text-gray-500 mb-8'>Not Found</p>
+			<p className='text-gray-500 mb-8'>
+				The requested page was not found
+			</p>
+			<Link href='/'>
+				<button className='bg-th-primary text-white px-3 py-1'>
+					Go back home
+				</button>
+			</Link>
 		</div>
 	);
 }
