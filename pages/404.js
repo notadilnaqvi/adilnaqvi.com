@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Error404() {
 	return (
-		<div className='w-full'>
+		<section className='w-full pt-16'>
 			<h1 className='text-2xl text-gray-700'>Error 404</h1>
 			<p className='text-gray-500 mb-8'>Not Found</p>
 			<p className='text-gray-500 mb-8'>
@@ -13,6 +13,6 @@ export default function Error404() {
 					Go back home
 				</button>
 			</Link>
-		</div>
+		</section>
 	);
 }

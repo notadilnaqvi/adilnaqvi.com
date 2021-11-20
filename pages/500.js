@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Error505() {
 	return (
-		<div className='w-full'>
+		<section className='w-full pt-16'>
 			<h1 className='text-2xl text-gray-700'>Error 500</h1>
 			<p className='text-base text-gray-500 mb-8'>
 				Internal Server Error
@@ -15,6 +15,6 @@ export default function Error505() {
 					Report this issue
 				</button>
 			</Link>
-		</div>
+		</section>
 	);
 }

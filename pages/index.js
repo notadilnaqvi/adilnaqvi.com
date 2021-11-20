@@ -1,21 +1,26 @@
-import { useContext } from 'react';
-import { AppContext } from '../context';
-import { decrement, increment } from '../store';
+import Image from 'next/image';
 
 export default function Home() {
-	const { state, dispatch } = useContext(AppContext);
 	return (
-		<div className='w-full'>
-			<h1 className='text-xl mb-2'>This is the home page</h1>
-			<div className='flex items-center space-x-4'>
-				<button className='btn' onClick={() => dispatch(decrement())}>
-					- 1
-				</button>
-				<p>{state.count}</p>
-				<button className='btn' onClick={() => dispatch(increment())}>
-					+1
-				</button>
+		<section className='w-full pt-16 flex flex-row justify-between'>
+			<p className='text-2xl text-gray-700 leading-10'>
+				Hi, I am
+				<br />
+				<span className='text-th-secondary'>Adil Naqvi</span>,
+				<br />
+				a developer focussed
+				<br />
+				on crafting experiences
+			</p>
+			<div className='z-[-1]'>
+				<Image
+					src='https://dummyimage.com/160x160/555/fff'
+					width='160'
+					height='160'
+					className='rounded-full'
+					layout='fixed'
+				/>
 			</div>
-		</div>
+		</section>
 	);
 }

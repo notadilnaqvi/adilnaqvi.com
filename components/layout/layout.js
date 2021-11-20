@@ -6,8 +6,8 @@ function Layout({ children }) {
 	return (
 		<React.Fragment>
 			<Header />
-			<main className='w-full flex justify-center min-h-[93vh] py-4'>
-				<div className='max-w-4xl w-full'>{children}</div>
+			<main className='pt-16 w-full tracking-wide flex justify-center min-h-[93vh]'>
+				<div className='max-w-[1024px] w-full px-6'>{children}</div>
 			</main>
 			<Footer />
 		</React.Fragment>

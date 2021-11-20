@@ -11,6 +11,9 @@ module.exports = {
 				'th-primary': '#6EB0DE',
 				'th-secondary': '#6D9ABA',
 			},
+			fontFamily: {
+				sans: ['Open Sans'],
+			},
 		},
 	},
 	variants: {
