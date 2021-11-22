@@ -89,7 +89,9 @@ function Header() {
 				{/* Burger menu nav links */}
 				<div
 					className={`block md:hidden absolute w-full z-40 right-0 h-screen ${
-						visibility ? 'bg-[#00000099]' : 'bg-none'
+						visibility
+							? 'bg-[#00000099] visible'
+							: 'bg-none invisible'
 					} transition-all duration-200 ease-in-out `}
 					onClick={() => setVisibility(false)}
 				>
