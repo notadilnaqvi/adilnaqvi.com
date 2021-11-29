@@ -19,7 +19,7 @@ export default function Contact({ params }) {
 	};
 
 	return (
-		<div className='grid grid-cols-2 gap-16 pt-16'>
+		<div className='grid grid-cols-1 md:grid-cols-2 gap-16 pt-16'>
 			<section className='w-full'>
 				<h1 className='text-2xl text-gray-700 mb-8'>Contact</h1>
 				<form className='flex flex-col space-y-2'>
