@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function Error404() {
+function Error404() {
 	return (
 		<section className='w-full pt-16'>
 			<h1 className='text-2xl text-gray-700'>Error 404</h1>
@@ -16,3 +16,7 @@ export default function Error404() {
 		</section>
 	);
 }
+
+Error404.title = '404 Not Found';
+
+export default Error404;

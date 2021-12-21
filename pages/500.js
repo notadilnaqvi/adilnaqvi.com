@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function Error505() {
+function Error500() {
 	return (
 		<section className='w-full pt-16'>
 			<h1 className='text-2xl text-gray-700'>Error 500</h1>
@@ -18,3 +18,7 @@ export default function Error505() {
 		</section>
 	);
 }
+
+Error500.title = '500 Internal Server Error';
+
+export default Error500;

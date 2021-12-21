@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 
-export default function Contact({ params }) {
+function Contact({ params }) {
 	const { name, email, org, msg } = params;
 	const [form, setForm] = useState({ name, email, org, msg });
 
@@ -79,10 +79,10 @@ export default function Contact({ params }) {
 						<p className=''>Drop me an email</p>
 						<div className='z-[-1]'>
 							<Image
-								src='https://dummyimage.com/40x40/555/fff'
+								src='https://dummyimage.com/40x40/dadada/dadada'
 								width='40'
 								height='40'
-								className='rounded-full'
+								// className='rounded-full'
 							/>
 						</div>
 					</li>
@@ -90,10 +90,10 @@ export default function Contact({ params }) {
 						<p className=''>View my projects</p>
 						<div className='z-[-1]'>
 							<Image
-								src='https://dummyimage.com/40x40/555/fff'
+								src='https://dummyimage.com/40x40/dadada/dadada'
 								width='40'
 								height='40'
-								className='rounded-full'
+								// className='rounded-full'
 							/>
 						</div>
 					</li>
@@ -101,10 +101,10 @@ export default function Contact({ params }) {
 						<p className=''>See my designs</p>
 						<div className='z-[-1]'>
 							<Image
-								src='https://dummyimage.com/40x40/555/fff'
+								src='https://dummyimage.com/40x40/dadada/dadada'
 								width='40'
 								height='40'
-								className='rounded-full'
+								// className='rounded-full'
 							/>
 						</div>
 					</li>
@@ -112,10 +112,10 @@ export default function Contact({ params }) {
 						<p className=''>Hire me</p>
 						<div className='z-[-1]'>
 							<Image
-								src='https://dummyimage.com/40x40/555/fff'
+								src='https://dummyimage.com/40x40/dadada/dadada'
 								width='40'
 								height='40'
-								className='rounded-full'
+								// className='rounded-full'
 							/>
 						</div>
 					</li>
@@ -123,10 +123,10 @@ export default function Contact({ params }) {
 						<p className=''>Know me better</p>
 						<div className='z-[-1]'>
 							<Image
-								src='https://dummyimage.com/40x40/555/fff'
+								src='https://dummyimage.com/40x40/dadada/dadada'
 								width='40'
 								height='40'
-								className='rounded-full'
+								// className='rounded-full'
 							/>
 						</div>
 					</li>
@@ -134,10 +134,10 @@ export default function Contact({ params }) {
 						<p className=''>Watch me play</p>
 						<div className='z-[-1]'>
 							<Image
-								src='https://dummyimage.com/40x40/555/fff'
+								src='https://dummyimage.com/40x40/dadada/dadada'
 								width='40'
 								height='40'
-								className='rounded-full'
+								// className='rounded-full'
 							/>
 						</div>
 					</li>
@@ -147,12 +147,16 @@ export default function Contact({ params }) {
 	);
 }
 
+Contact.title = 'Contact';
+
+export default Contact;
+
 export async function getServerSideProps({ query }) {
 	const params = {
-		name: query.name ?? '',
-		email: query.email ?? '',
-		org: query.org ?? '',
-		msg: query.msg ?? '',
+		name: query.n ?? '',
+		email: query.e ?? '',
+		org: query.o ?? '',
+		msg: query.m ?? '',
 	};
 	return {
 		props: { params },

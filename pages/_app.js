@@ -3,6 +3,7 @@ import '../styles/global.css';
 import Layout from '../components/layout/layout';
 import { Provider } from '../context';
 import { initialState, reducer } from '../store';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
 	const [state, dispatch] = useReducer(reducer, initialState);
@@ -13,6 +14,10 @@ function MyApp({ Component, pageProps }) {
 
 	return (
 		<Provider value={value}>
+			<Head>
+				<title>{Component.title}</title>
+				<link rel='shortcut icon' href='/logo.ico' />
+			</Head>
 			<Layout>
 				<Component {...pageProps} />
 			</Layout>

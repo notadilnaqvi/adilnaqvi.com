@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { AppContext } from '../context';
 import { decrement, increment } from '../store';
 
-export default function Work() {
+function Work() {
 	const { state, dispatch } = useContext(AppContext);
 	return (
 		<div className='w-full'>
@@ -19,3 +19,7 @@ export default function Work() {
 		</div>
 	);
 }
+
+Work.title = 'Work';
+
+export default Work;

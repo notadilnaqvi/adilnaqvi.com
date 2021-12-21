@@ -9,15 +9,15 @@ function Header() {
 	};
 
 	return (
-		<header className='fixed w-full flex justify-center h-16 bg-gradient-to-r from-th-primary to-th-secondary tracking-widest'>
+		<header className='fixed w-full flex justify-center h-14 bg-gradient-to-r from-th-primary to-th-secondary tracking-widest'>
 			<nav className='max-w-[1024px] w-full flex h-full font-medium px-6'>
 				{/* Logo */}
 				<div className='h-full mr-auto'>
 					<Link href='/'>
 						<a className='text-white h-full flex items-center'>
 							<svg
-								width='35'
-								height='35'
+								width='32'
+								height='32'
 								viewBox='0 0 100 100'
 								fill='none'
 								xmlns='http://www.w3.org/2000/svg'
@@ -67,11 +67,11 @@ function Header() {
 				{/* Burger menu */}
 				<button
 					onClick={toggleVisibility}
-					className='flex flex-col justify-center space-y-[6px] md:hidden items-center px-4 hover:bg-[#0000001A] transition duration-200 ease-in-out z-50'
+					className='flex flex-col justify-center space-y-[8px] md:hidden items-center px-5 hover:bg-[#0000001A] transition duration-200 ease-in-out z-50'
 				>
 					<span
 						className={`w-[24px] bg-white h-[2px] transition duration-200 ease-in-out ${
-							visibility && 'rotate-45 translate-y-2'
+							visibility && 'rotate-45 translate-y-[10px]'
 						}`}
 					></span>
 					<span
@@ -81,7 +81,7 @@ function Header() {
 					></span>
 					<span
 						className={`w-[24px] bg-white h-[2px] transition duration-200 ease-in-out ${
-							visibility && '-rotate-45 -translate-y-2'
+							visibility && '-rotate-45 translate-y-[-10px]'
 						}`}
 					></span>
 				</button>
