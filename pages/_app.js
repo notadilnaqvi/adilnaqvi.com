@@ -1,12 +1,24 @@
-import { useMemo, useReducer } from 'react';
+import { useEffect, useMemo, useReducer } from 'react';
 import '../styles/global.css';
 import Layout from '../components/layout/layout';
 import { Provider } from '../context';
-import { initialState, reducer } from '../store';
+import { addRoute, initialState, reducer } from '../store';
 import Head from 'next/head';
+import { useRouter } from 'next/dist/client/router';
 
 function MyApp({ Component, pageProps }) {
+	const router = useRouter();
 	const [state, dispatch] = useReducer(reducer, initialState);
+
+	useEffect(() => {
+		dispatch(addRoute(router.pathname));
+	}, [router.pathname]);
+
+	useEffect(() => {
+		for (const key in initialState) {
+			window.localStorage.setItem(key, JSON.stringify(state[key]));
+		}
+	}, [state]);
 
 	const value = useMemo(() => {
 		return { state, dispatch };

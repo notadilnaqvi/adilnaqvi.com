@@ -5,24 +5,26 @@ function Contact({ params }) {
 	const { name, email, org, msg } = params;
 	const [form, setForm] = useState({ name, email, org, msg });
 
-	const handleSubmit = async event => {
+	function handleSubmit(event) {
 		event.preventDefault();
 		setForm({ name: '', email: '', org: '', msg: '' });
-		console.log(form);
-	};
+	}
 
-	const handleChange = event => {
+	function handleChange(event) {
 		setForm(oldForm => ({
 			...oldForm,
 			[event.target.name]: event.target.value,
 		}));
-	};
+	}
 
 	return (
 		<div className='grid grid-cols-1 md:grid-cols-2 gap-16 pt-16'>
 			<section className='w-full'>
 				<h1 className='text-2xl text-gray-700 mb-8'>Contact</h1>
-				<form className='flex flex-col space-y-2'>
+				<form
+					className='flex flex-col space-y-2'
+					onSubmit={handleSubmit}
+				>
 					<label htmlFor='name'>Name</label>
 					<input
 						id='name'
@@ -51,7 +53,7 @@ function Contact({ params }) {
 						className='outline-none border-2 px-2 py-1 focus:border-th-secondary'
 						onChange={handleChange}
 						value={form.org}
-						required
+						placeholder='Optional'
 					/>
 					<label htmlFor='msg'>Message</label>
 					<textarea
@@ -66,7 +68,7 @@ function Contact({ params }) {
 					/>
 					<button
 						className='bg-th-primary text-white px-3 py-1 w-24 ml-auto'
-						onClick={handleSubmit}
+						type='submit'
 					>
 						Submit
 					</button>
@@ -82,7 +84,6 @@ function Contact({ params }) {
 								src='https://dummyimage.com/40x40/dadada/dadada'
 								width='40'
 								height='40'
-								// className='rounded-full'
 							/>
 						</div>
 					</li>
@@ -93,7 +94,6 @@ function Contact({ params }) {
 								src='https://dummyimage.com/40x40/dadada/dadada'
 								width='40'
 								height='40'
-								// className='rounded-full'
 							/>
 						</div>
 					</li>
@@ -104,7 +104,6 @@ function Contact({ params }) {
 								src='https://dummyimage.com/40x40/dadada/dadada'
 								width='40'
 								height='40'
-								// className='rounded-full'
 							/>
 						</div>
 					</li>
@@ -115,7 +114,6 @@ function Contact({ params }) {
 								src='https://dummyimage.com/40x40/dadada/dadada'
 								width='40'
 								height='40'
-								// className='rounded-full'
 							/>
 						</div>
 					</li>
@@ -126,7 +124,6 @@ function Contact({ params }) {
 								src='https://dummyimage.com/40x40/dadada/dadada'
 								width='40'
 								height='40'
-								// className='rounded-full'
 							/>
 						</div>
 					</li>
@@ -137,7 +134,6 @@ function Contact({ params }) {
 								src='https://dummyimage.com/40x40/dadada/dadada'
 								width='40'
 								height='40'
-								// className='rounded-full'
 							/>
 						</div>
 					</li>
