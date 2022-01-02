@@ -41,9 +41,16 @@ function Contact() {
 		event.preventDefault();
 		const res = await fetch('/api/form', {
 			method: 'POST',
+			headers: {
+				Accept: 'application/json',
+				'Content-Type': 'application/json',
+			},
 			body: JSON.stringify(form),
 		});
-		router.push('/contact');
+		if (res.ok) {
+			setForm({ name: '', email: '', organization: '', message: '' });
+			router.push('/contact');
+		}
 	}
 
 	function handleChange(event) {
