@@ -62,6 +62,20 @@ function Header() {
 							</a>
 						</Link>
 					</li>
+					<li>
+						<Link href='/404'>
+							<a className='text-white h-full flex items-center px-4 hover:bg-[#0000001A] transition duration-200 ease-in-out'>
+								404
+							</a>
+						</Link>
+					</li>
+					<li>
+						<Link href='/500'>
+							<a className='text-white h-full flex items-center px-4 hover:bg-[#0000001A] transition duration-200 ease-in-out'>
+								500
+							</a>
+						</Link>
+					</li>
 				</ul>
 
 				{/* Burger menu */}
@@ -125,6 +139,20 @@ function Header() {
 							<Link href='/contact'>
 								<a className='text-white h-16 flex items-center px-8 hover:bg-[#0000001A] transition duration-200 ease-in-out'>
 									Contact
+								</a>
+							</Link>
+						</li>
+						<li>
+							<Link href='/404'>
+								<a className='text-white h-16 flex items-center px-8 hover:bg-[#0000001A] transition duration-200 ease-in-out'>
+									404
+								</a>
+							</Link>
+						</li>
+						<li>
+							<Link href='/500'>
+								<a className='text-white h-16 flex items-center px-8 hover:bg-[#0000001A] transition duration-200 ease-in-out'>
+									500
 								</a>
 							</Link>
 						</li>
