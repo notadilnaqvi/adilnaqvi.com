@@ -1,6 +1,8 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { Router, useRouter } from 'next/dist/client/router';
+import Link from 'next/link';
 
 const variants = {
 	initial: {
@@ -20,13 +22,28 @@ const stagger = {
 	animate: { transition: { staggerChildren: 0.075 } },
 };
 
-function Contact({ params }) {
-	const { name, email, org, msg } = params;
-	const [form, setForm] = useState({ name, email, org, msg });
+function Contact() {
+	const router = useRouter();
+	const { query } = router;
 
-	function handleSubmit(event) {
+	const name = query.n ?? '';
+	const email = query.e ?? '';
+	const organization = query.o ?? '';
+	const message = query.m ?? '';
+
+	const [form, setForm] = useState({ name, email, organization, message });
+
+	useEffect(() => {
+		setForm({ name, email, organization, message });
+	}, [name, email, organization, message]);
+
+	async function handleSubmit(event) {
 		event.preventDefault();
-		setForm({ name: '', email: '', org: '', msg: '' });
+		const res = await fetch('/api/form', {
+			method: 'POST',
+			body: JSON.stringify(form),
+		});
+		router.push('/contact');
 	}
 
 	function handleChange(event) {
@@ -78,25 +95,25 @@ function Contact({ params }) {
 							value={form.email}
 							required
 						/>
-						<label htmlFor='org'>Organization</label>
+						<label htmlFor='organization'>Organization</label>
 						<input
-							id='org'
-							name='org'
+							id='organization'
+							name='organization'
 							type='text'
 							className='outline-none border-2 px-2 py-1 focus:border-th-secondary'
 							onChange={handleChange}
-							value={form.org}
+							value={form.organization}
 							placeholder='Optional'
 						/>
-						<label htmlFor='msg'>Message</label>
+						<label htmlFor='message'>Message</label>
 						<textarea
-							id='msg'
-							name='msg'
+							id='message'
+							name='message'
 							className='outline-none border-2 px-2 py-1 focus:border-th-secondary resize-y'
 							onChange={handleChange}
 							rows={3}
 							maxLength={256}
-							value={form.msg}
+							value={form.message}
 							required
 						/>
 					</div>
@@ -108,7 +125,7 @@ function Contact({ params }) {
 							Submit
 						</button>
 						<p className='text-gray-500'>
-							It is now {currentTime} in my city
+							It's currently {currentTime} in my city
 						</p>
 					</div>
 				</form>
@@ -175,15 +192,3 @@ function Contact({ params }) {
 Contact.title = 'Contact';
 
 export default Contact;
-
-export async function getServerSideProps({ query }) {
-	const params = {
-		name: query.n ?? '',
-		email: query.e ?? '',
-		org: query.o ?? '',
-		msg: query.m ?? '',
-	};
-	return {
-		props: { params },
-	};
-}
