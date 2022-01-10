@@ -28,7 +28,7 @@ function Error404() {
 			<p className='text-base text-gray-500 mb-8'>
 				The requested page was not found
 			</p>
-			<Link href='/'>
+			<Link href='/' passHref>
 				<button className='bg-th-primary text-white px-3 py-1'>
 					Go back home
 				</button>

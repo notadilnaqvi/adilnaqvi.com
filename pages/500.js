@@ -28,9 +28,9 @@ function Error500() {
 				Internal Server Error
 			</p>
 			<p className='text-base text-gray-500 mb-8'>
-				Welp. This wasn't supposed to happen
+				Welp. This wasn&apos;t supposed to happen
 			</p>
-			<Link href='/'>
+			<Link href='/' passHref>
 				<button className='bg-th-primary text-white px-3 py-1'>
 					Go back home
 				</button>

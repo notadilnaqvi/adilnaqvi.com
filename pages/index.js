@@ -14,13 +14,13 @@ function Home() {
 					<br />
 					on crafting experiences
 				</p>
-				<div className='z-[-1] hidden md:block'>
+				<div className='hidden md:block'>
 					<Image
 						src='https://dummyimage.com/160x160/dadada/dadada'
 						width='160'
 						height='160'
-						// className='rounded-full'
 						layout='fixed'
+						alt='Adil Naqvi'
 					/>
 				</div>
 			</section>
