@@ -8,6 +8,10 @@
 	@apply py-1 px-2 bg-blue-200 rounded-sm hover:bg-blue-300;
 }
 
+.lnk {
+	@apply text-th-primary hover:text-th-secondary underline underline-offset-1 decoration-1 decoration-gray-300;
+}
+
 .debug {
 	@apply border-[1px] border-red-600;
 }
