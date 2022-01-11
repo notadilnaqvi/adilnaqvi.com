@@ -1,7 +1,7 @@
 function Footer() {
 	return (
 		<footer className='w-full flex items-center justify-center bg-gray-100 py-10'>
-			<div className='max-w-[1024px] w-full flex justify-between space-x-6 text-sm text-gray-500 px-6 flex-col md:flex-row md:space-y-0 space-y-8 items-center'>
+			<div className='max-w-[1024px] w-full flex justify-between text-sm text-gray-500 px-6 flex-col md:flex-row md:space-y-0 space-y-8 items-center'>
 				<div className='flex flex-col md:place-items-start items-center'>
 					<p>Copyright &copy; 2021 Adil Naqvi</p>
 					<p>All Rights Reserved</p>
