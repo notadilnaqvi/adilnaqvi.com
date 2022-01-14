@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './header';
 import Footer from './footer';
+import Link from 'next/link';
 
 function Layout({ children }) {
 	return (
@@ -12,6 +13,9 @@ function Layout({ children }) {
 				</div>
 			</main>
 			<Footer />
+			<Link href='/achievements'>
+				<a className='fixed right-8 bottom-0 w-8 h-10 bg-gradient-to-b from-[#FFD700] to-[#DAA520]'></a>
+			</Link>
 		</React.Fragment>
 	);
 }
