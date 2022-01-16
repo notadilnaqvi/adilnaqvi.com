@@ -94,7 +94,7 @@ function Achievements() {
 			<p className='text-base text-gray-500 mb-8'>
 				Good luck and have fun &#10024;
 			</p>
-			<div className='grid grid-cols-2 md:grid-cols-3 gap-4 text-white'>
+			<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-white'>
 				{achievementsData.map(achievement => {
 					const isAchieved = achievements.includes(achievement.key);
 					return (
