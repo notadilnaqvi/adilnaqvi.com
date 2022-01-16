@@ -2,13 +2,25 @@ import { useEffect, useMemo, useReducer } from 'react';
 import '../styles/global.css';
 import Layout from '../components/layout/layout';
 import { Provider } from '../context';
-import { addRoute, initialState, reducer } from '../store';
+import { addRoute, hydrateStore, initialState, reducer } from '../store';
 import Head from 'next/head';
 import { useRouter } from 'next/dist/client/router';
 
 function MyApp({ Component, pageProps }) {
 	const router = useRouter();
 	const [state, dispatch] = useReducer(reducer, initialState);
+
+	useEffect(() => {
+		const _routes = window.localStorage.getItem('routes');
+		const _achievements = window.localStorage.getItem('achievements');
+
+		const routes = _routes ? JSON.parse(_routes) : initialState.routes;
+		const achievements = _achievements
+			? JSON.parse(_achievements)
+			: initialState.achievements;
+
+		dispatch(hydrateStore({ routes, achievements }));
+	}, []);
 
 	useEffect(() => {
 		dispatch(addRoute(router.pathname));
