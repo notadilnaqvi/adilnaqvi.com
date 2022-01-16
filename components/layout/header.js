@@ -67,7 +67,7 @@ function Header() {
 				{/* Burger menu */}
 				<button
 					onClick={toggleVisibility}
-					className='flex flex-col justify-center space-y-[8px] md:hidden items-center px-5 hover:bg-[#0000001A] transition duration-200 ease-in-out z-50'
+					className='flex flex-col justify-center space-y-[8px] md:hidden items-center px-5 transition duration-200 ease-in-out z-50 outline-none'
 				>
 					<span
 						className={`w-[24px] bg-white h-[2px] transition duration-200 ease-in-out ${

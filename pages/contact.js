@@ -373,7 +373,7 @@ function Contact() {
 									onClick={() =>
 										toggleLinkVisibility(link.id)
 									}
-									className='text-white h-full flex items-center'
+									className='text-white h-full flex items-center outline-none'
 								>
 									{link.icon}
 								</button>
