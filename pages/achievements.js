@@ -1,5 +1,50 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { useContext } from 'react';
+import { AppContext } from '../context';
+
+const achievementsData = [
+	{
+		key: 'adventurer',
+		title: 'Adventurer',
+		text: 'Visit the achievements page',
+	},
+	{
+		key: 'explorer',
+		title: 'Explorer',
+		text: 'Visit 5 pages on adilnaqvi.com',
+	},
+	{
+		key: 'grandmaster',
+		title: 'Grandmaster',
+		text: 'Find all 5 chess pieces hidden across this website',
+	},
+	{
+		key: 'hacker',
+		title: 'Hacker',
+		text: 'Find the flag hidden in the source code',
+	},
+	{
+		key: 'initiation',
+		title: 'Initiation',
+		text: 'Say hello or recommend a movie (via the contact form)',
+	},
+	{
+		key: 'teapot',
+		title: 'Teapot',
+		text: "I'm a teapot",
+	},
+	{
+		key: 'adventurer1',
+		title: 'Adventurer',
+		text: 'Visit the achievements page or something',
+	},
+	{
+		key: 'adventurer2',
+		title: 'Adventurer',
+		text: 'Visit the achievements page or something',
+	},
+];
 
 const variants = {
 	initial: {
@@ -16,6 +61,8 @@ const variants = {
 };
 
 function Achievements() {
+	const { state } = useContext(AppContext);
+	const { achievements } = state;
 	return (
 		<motion.section
 			initial='initial'
@@ -29,9 +76,8 @@ function Achievements() {
 			</p>
 			<p className='text-base text-gray-500 mb-8'>
 				There are 8<span className='italic'> achievements </span>
-				available on this website. Try and get &apos;em all. Some are
-				pretty straight forward. Others, however, may require some
-				effort.
+				available on this website. Some are pretty straight forward.
+				Others require some effort. Try and get &apos;em all.
 			</p>
 			<p className='text-base text-gray-500 mb-8'>
 				You can always&nbsp;
@@ -49,41 +95,24 @@ function Achievements() {
 				Good luck and have fun &#10024;
 			</p>
 			<div className='grid grid-cols-2 md:grid-cols-3 gap-4 text-white'>
-				<div className='bg-gradient-to-r from-[#aeaeae] to-[#c2c2c2] p-3'>
-					<p className='text-xl font-semibold'>Adventurer</p>
-					<p>Visit the achievements page</p>
-				</div>
-				<div className='bg-gradient-to-r from-[#aeaeae] to-[#c2c2c2] p-3'>
-					<p className='text-xl font-semibold'>Explorer</p>
-					<p>Visit 5 pages on adilnaqvi.com</p>
-				</div>
-				<div className='bg-gradient-to-r from-[#68C56C] to-[#68E46D] p-3'>
-					<p className='text-xl font-semibold'>Grandmaster</p>
-					<p>Find all 5 chess pieces hidden across this website</p>
-				</div>
-				<div className='bg-gradient-to-r from-[#aeaeae] to-[#c2c2c2] p-3'>
-					<p className='text-xl font-semibold'>Hacker</p>
-					<p>
-						Find the <span className='italic'>flag</span> hidden in
-						the source code
-					</p>
-				</div>
-				<div className='bg-gradient-to-r from-[#aeaeae] to-[#c2c2c2] p-3'>
-					<p className='text-xl font-semibold'>Say Hello</p>
-					<p>Or recommend a book/movie/show (via the contact form)</p>
-				</div>
-				<div className='bg-gradient-to-r from-[#aeaeae] to-[#c2c2c2] p-3'>
-					<p className='text-xl font-semibold'>Almost Nice</p>
-					<p>Click 68 times</p>
-				</div>
-				<div className='bg-gradient-to-r from-[#aeaeae] to-[#c2c2c2] p-3'>
-					<p className='text-xl font-semibold'>Traveller</p>
-					<p>Visit 5 pages on adilnaqvi.com</p>
-				</div>
-				<div className='bg-gradient-to-r from-[#aeaeae] to-[#c2c2c2] p-3'>
-					<p className='text-xl font-semibold'>Teapot</p>
-					<p>I&apos;m a teapot</p>
-				</div>
+				{achievementsData.map(achievement => {
+					const isAchieved = achievements.includes(achievement.key);
+					return (
+						<div
+							className={`p-3 bg-gradient-to-r ${
+								isAchieved
+									? 'from-[#68c56c] to-[#68e46d]'
+									: 'from-[#aeaeae] to-[#c2c2c2]'
+							}`}
+							key={achievement.key}
+						>
+							<p className='text-xl font-semibold'>
+								{achievement.title}
+							</p>
+							<p>{achievement.text}</p>
+						</div>
+					);
+				})}
 			</div>
 			<p className='text-base text-gray-500 mt-16'>
 				<span className='italic'>Achievements</span> were heavily
