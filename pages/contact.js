@@ -1,6 +1,8 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useRouter } from 'next/dist/client/router';
+import { AppContext } from '../context';
+import { addAchievement } from '../store';
 
 const variants = {
 	initial: {
@@ -212,7 +214,9 @@ const links = [
 		),
 	},
 ];
+
 function Contact() {
+	const { dispatch } = useContext(AppContext);
 	const [linkVisibility, setLinkVisibility] = useState({
 		email: false,
 		github: false,
@@ -246,6 +250,7 @@ function Contact() {
 		});
 		if (res.ok) {
 			setForm({ name: '', email: '', organization: '', message: '' });
+			dispatch(addAchievement('submission'));
 			router.push('/contact');
 		}
 	}
@@ -325,10 +330,7 @@ function Contact() {
 						/>
 					</div>
 					<div className='mt-4 flex items-center'>
-						<button
-							className='bg-th-primary text-white px-3 py-1 w-24 mr-auto'
-							type='submit'
-						>
+						<button className='btn mr-auto' type='submit'>
 							Submit
 						</button>
 						<p className='text-gray-500 text-sm text-opacity-70'>

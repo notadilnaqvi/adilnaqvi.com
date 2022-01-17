@@ -31,9 +31,7 @@ function Error500() {
 				Welp. This wasn&apos;t supposed to happen
 			</p>
 			<Link href='/' passHref>
-				<button className='bg-th-primary text-white px-3 py-1'>
-					Go back home
-				</button>
+				<button className='btn'>Go back home</button>
 			</Link>
 		</motion.section>
 	);

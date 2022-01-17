@@ -36,10 +36,7 @@ function ErrorNoConnection() {
 			<p className='text-base text-gray-500 mb-8'>
 				Check your internet connection and try again
 			</p>
-			<button
-				onClick={handleReload}
-				className='bg-th-primary text-white px-3 py-1'
-			>
+			<button onClick={handleReload} className='btn'>
 				Reload
 			</button>
 		</motion.section>

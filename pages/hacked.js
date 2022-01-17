@@ -15,7 +15,7 @@ const variants = {
 	},
 };
 
-function Error404() {
+function Hacked() {
 	return (
 		<motion.section
 			initial='initial'
@@ -23,18 +23,20 @@ function Error404() {
 			variants={variants}
 			className='w-full pt-16'
 		>
-			<h1 className='text-2xl text-gray-700'>Error 404</h1>
-			<p className='text-base text-gray-500 mb-8'>Not Found</p>
+			<h1 className='text-2xl text-gray-700 mb-8'>Hacked</h1>
 			<p className='text-base text-gray-500 mb-8'>
-				The requested page was not found
+				You found the flag. Yay!
 			</p>
-			<Link href='/' passHref>
-				<button className='btn'>Go back home</button>
+			<p className='text-base text-gray-500 mb-8'>
+				Now go check the achievement you just got
+			</p>
+			<Link href='/achievements' passHref>
+				<button className='btn'>Check achievements</button>
 			</Link>
 		</motion.section>
 	);
 }
 
-Error404.title = '404 Not Found';
+Hacked.title = 'Hacked';
 
-export default Error404;
+export default Hacked;

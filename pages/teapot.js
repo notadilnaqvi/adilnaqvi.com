@@ -15,7 +15,7 @@ const variants = {
 	},
 };
 
-function Error404() {
+function Error418() {
 	return (
 		<motion.section
 			initial='initial'
@@ -23,18 +23,29 @@ function Error404() {
 			variants={variants}
 			className='w-full pt-16'
 		>
-			<h1 className='text-2xl text-gray-700'>Error 404</h1>
-			<p className='text-base text-gray-500 mb-8'>Not Found</p>
+			<h1 className='text-2xl text-gray-700'>Error 418</h1>
+			<p className='text-base text-gray-500 mb-8'>I'm a teapot</p>
 			<p className='text-base text-gray-500 mb-8'>
-				The requested page was not found
+				The requested entity body is short and stout. Tip me over and
+				pour me out.
 			</p>
 			<Link href='/' passHref>
 				<button className='btn'>Go back home</button>
 			</Link>
+			<div className='mt-8'>
+				<a
+					href='https://save418.com/'
+					target='_blank'
+					rel='noopener noreferrer'
+					className='lnk'
+				>
+					What's this?
+				</a>
+			</div>
 		</motion.section>
 	);
 }
 
-Error404.title = '404 Not Found';
+Error418.title = "418 I'm a teapot";
 
-export default Error404;
+export default Error418;

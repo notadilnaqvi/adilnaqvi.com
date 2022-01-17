@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.btn {
+	@apply bg-th-primary text-white px-3 py-1 active:translate-x-[1px] active:translate-y-[1px];
+}
+
 .lnk {
 	@apply text-th-primary hover:text-th-secondary underline underline-offset-1 decoration-1 decoration-gray-300;
 }

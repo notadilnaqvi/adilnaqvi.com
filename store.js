@@ -6,14 +6,19 @@ export const initialState = {
 // Actions
 const ADD_ROUTE = 'achievements/add-route';
 const HYDRATE_STORE = 'achievements/hydrate-store';
+const ADD_ACHIEVEMENT = 'achievements/add-achievement';
 
 // Action creators
 export const addRoute = route => {
 	return { type: ADD_ROUTE, payload: { route } };
 };
 
-export const hydrateStore = newStore => {
-	return { type: HYDRATE_STORE, payload: newStore };
+export const hydrateStore = data => {
+	return { type: HYDRATE_STORE, payload: { data } };
+};
+
+export const addAchievement = achievement => {
+	return { type: ADD_ACHIEVEMENT, payload: { achievement } };
 };
 
 // Reducers
@@ -25,21 +30,50 @@ export const reducer = (state, action) => {
 				return { ...state };
 			}
 
+			const _achievements = [...state.achievements];
 			if ([...state.routes, action.payload.route].length === 5) {
-				return {
-					...state,
-					routes: [...state.routes, action.payload.route],
-					achievements: [...state.achievements, 'explorer'],
-				};
+				_achievements = [..._achievements, 'explorer'];
 			}
+
+			if (action.payload.route === '/achievements') {
+				_achievements = [..._achievements, 'adventurer'];
+			}
+
+			if (action.payload.route === '/teapot') {
+				_achievements = [..._achievements, 'teapot'];
+			}
+
+			if (action.payload.route === '/hacked') {
+				_achievements = [..._achievements, 'hacker'];
+			}
+
+			if (action.payload.route === '/_offline') {
+				_achievements = [..._achievements, 'airplane'];
+			}
+
 			return {
 				...state,
 				routes: [...state.routes, action.payload.route],
+				achievements: _achievements,
 			};
 		}
 		case HYDRATE_STORE: {
 			return {
-				...action.payload,
+				...action.payload.data,
+			};
+		}
+		case ADD_ACHIEVEMENT: {
+			// If achievement is already added, don't do anything
+			if (state.achievements?.includes(action.payload.achievement)) {
+				return { ...state };
+			}
+
+			return {
+				...state,
+				achievements: [
+					...state.achievements,
+					action.payload.achievement,
+				],
 			};
 		}
 		default:

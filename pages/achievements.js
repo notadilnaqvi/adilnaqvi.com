@@ -15,6 +15,11 @@ const achievementsData = [
 		text: 'Visit 5 pages on adilnaqvi.com',
 	},
 	{
+		key: 'submission',
+		title: 'Submission',
+		text: 'Say hello. Or ask a question. Or recommend a movie',
+	},
+	{
 		key: 'grandmaster',
 		title: 'Grandmaster',
 		text: 'Find all 5 chess pieces hidden across this website',
@@ -25,24 +30,14 @@ const achievementsData = [
 		text: 'Find the flag hidden in the source code',
 	},
 	{
-		key: 'initiation',
-		title: 'Initiation',
-		text: 'Say hello or recommend a movie (via the contact form)',
-	},
-	{
 		key: 'teapot',
 		title: 'Teapot',
 		text: "I'm a teapot",
 	},
 	{
-		key: 'adventurer1',
-		title: 'Adventurer',
-		text: 'Visit the achievements page or something',
-	},
-	{
-		key: 'adventurer2',
-		title: 'Adventurer',
-		text: 'Visit the achievements page or something',
+		key: 'airplane',
+		title: 'Airplane Mode',
+		text: 'Service workers are basically magic, no?',
 	},
 ];
 
