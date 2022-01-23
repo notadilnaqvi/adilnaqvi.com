@@ -54,7 +54,7 @@ export const reducer = (state, action) => {
 			}
 
 			if (action.payload.route === '/_offline') {
-				_achievements = [..._achievements, 'airplane'];
+				_achievements = [..._achievements, 'airplane-mode'];
 			}
 
 			return {
