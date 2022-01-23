@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from 'react';
 import { useRouter } from 'next/dist/client/router';
 import { AppContext } from '../context';
 import { addAchievement } from '../store';
+import ChessPiece from '../components/chessPiece';
 
 const variants = {
 	initial: {
@@ -350,17 +351,22 @@ function Contact() {
 							>
 								<AnimatePresence>
 									{linkVisibility[link.id] ? (
-										<motion.a
-											initial={{ opacity: 0 }}
-											animate={{ opacity: 1 }}
-											exit={{ opacity: 0 }}
-											className='lnk'
-											href={link.href}
-											target='_blank'
-											rel='noopener noreferrer'
-										>
-											{link.anchorText}
-										</motion.a>
+										<>
+											<motion.a
+												initial={{ opacity: 0 }}
+												animate={{ opacity: 1 }}
+												exit={{ opacity: 0 }}
+												className='lnk'
+												href={link.href}
+												target='_blank'
+												rel='noopener noreferrer'
+											>
+												{link.anchorText}
+											</motion.a>
+											{link.id === 'github' && (
+												<ChessPiece name='queen' />
+											)}
+										</>
 									) : (
 										<motion.p
 											initial={{ opacity: 0 }}

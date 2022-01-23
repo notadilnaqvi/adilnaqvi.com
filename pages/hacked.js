@@ -25,7 +25,7 @@ function Hacked() {
 		>
 			<h1 className='text-2xl text-gray-700 mb-8'>Hacked</h1>
 			<p className='text-base text-gray-500 mb-8'>
-				You found the flag. Yay!
+				Yay! You found the flag
 			</p>
 			<p className='text-base text-gray-500 mb-8'>
 				Now go check the achievement you just got
