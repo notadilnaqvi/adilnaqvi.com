@@ -39,7 +39,7 @@ function Error418() {
 					rel='noopener noreferrer'
 					className='lnk'
 				>
-					What&apos;s this?
+					What is this error?
 				</a>
 			</div>
 		</motion.section>

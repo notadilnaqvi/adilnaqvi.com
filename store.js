@@ -1,12 +1,14 @@
 export const initialState = {
 	routes: [],
 	achievements: [],
+	pieces: [],
 };
 
 // Actions
 const ADD_ROUTE = 'achievements/add-route';
 const HYDRATE_STORE = 'achievements/hydrate-store';
 const ADD_ACHIEVEMENT = 'achievements/add-achievement';
+const ADD_CHESS_PIECE = 'achievements/add-chess-piece';
 
 // Action creators
 export const addRoute = route => {
@@ -19,6 +21,10 @@ export const hydrateStore = data => {
 
 export const addAchievement = achievement => {
 	return { type: ADD_ACHIEVEMENT, payload: { achievement } };
+};
+
+export const addChessPiece = piece => {
+	return { type: ADD_CHESS_PIECE, payload: { piece } };
 };
 
 // Reducers
@@ -74,6 +80,23 @@ export const reducer = (state, action) => {
 					...state.achievements,
 					action.payload.achievement,
 				],
+			};
+		}
+		case ADD_CHESS_PIECE: {
+			// If piece is already added, don't do anything
+			if (state.pieces?.includes(action.payload.piece)) {
+				return { ...state };
+			}
+
+			const _achievements = [...state.achievements];
+			if ([...state.pieces, action.payload.piece].length === 6) {
+				_achievements = [..._achievements, 'grandmaster'];
+			}
+
+			return {
+				...state,
+				pieces: [...state.pieces, action.payload.piece],
+				achievements: _achievements,
 			};
 		}
 		default:

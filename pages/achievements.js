@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useContext } from 'react';
 import { AppContext } from '../context';
+import ChessPiece from '../components/chessPiece';
 
 const achievementsData = [
 	{
@@ -15,14 +16,19 @@ const achievementsData = [
 		text: 'Visit 5 pages on adilnaqvi.com',
 	},
 	{
-		key: 'submission',
-		title: 'Submission',
+		key: 'chatterer',
+		title: 'Chatterer',
 		text: 'Say hello. Or ask a question. Or recommend a movie',
 	},
 	{
 		key: 'grandmaster',
 		title: 'Grandmaster',
-		text: 'Find all 5 chess pieces hidden across this website',
+		text: 'Find all 6 chess pieces hidden across this website',
+	},
+	{
+		key: 'airplane-mode',
+		title: 'Airplane Mode',
+		text: 'Get to the network error page',
 	},
 	{
 		key: 'hacker',
@@ -30,14 +36,14 @@ const achievementsData = [
 		text: 'Find the flag hidden in the source code',
 	},
 	{
+		key: 'cheater',
+		title: 'Cheater',
+		text: "I shouldn't have put everything in local storage",
+	},
+	{
 		key: 'teapot',
 		title: 'Teapot',
 		text: "I'm a teapot",
-	},
-	{
-		key: 'airplane',
-		title: 'Airplane Mode',
-		text: 'Service workers are basically magic, no?',
 	},
 ];
 
@@ -57,7 +63,7 @@ const variants = {
 
 function Achievements() {
 	const { state } = useContext(AppContext);
-	const { achievements } = state;
+	const { achievements, pieces } = state;
 	return (
 		<motion.section
 			initial='initial'
@@ -71,8 +77,8 @@ function Achievements() {
 			</p>
 			<p className='text-base text-gray-500 mb-8'>
 				There are 8<span className='italic'> achievements </span>
-				available on this website. Some are pretty straight forward.
-				Others require some effort. Try and get &apos;em all.
+				available on this website. They start off easy and get
+				progressively harder. Try and get &apos;em all.
 			</p>
 			<p className='text-base text-gray-500 mb-8'>
 				You can always&nbsp;
@@ -104,7 +110,11 @@ function Achievements() {
 							<p className='text-xl font-semibold'>
 								{achievement.title}
 							</p>
-							<p>{achievement.text}</p>
+							<p>
+								{achievement.text}
+								{achievement.key === 'grandmaster' &&
+									` (${pieces.length}/6 so far)`}
+							</p>
 						</div>
 					);
 				})}

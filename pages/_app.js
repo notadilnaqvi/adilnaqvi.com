@@ -6,6 +6,10 @@ import { addRoute, hydrateStore, initialState, reducer } from '../store';
 import Head from 'next/head';
 import { useRouter } from 'next/dist/client/router';
 
+// Hello
+// Here's the flag: https://adilnaqvi.com/hacked
+// Now shoo!
+
 function MyApp({ Component, pageProps }) {
 	const router = useRouter();
 	const [state, dispatch] = useReducer(reducer, initialState);
@@ -13,13 +17,15 @@ function MyApp({ Component, pageProps }) {
 	useEffect(() => {
 		const _routes = window.localStorage.getItem('routes');
 		const _achievements = window.localStorage.getItem('achievements');
+		const _pieces = window.localStorage.getItem('pieces');
 
 		const routes = _routes ? JSON.parse(_routes) : initialState.routes;
 		const achievements = _achievements
 			? JSON.parse(_achievements)
 			: initialState.achievements;
+		const pieces = _pieces ? JSON.parse(_pieces) : initialState.pieces;
 
-		dispatch(hydrateStore({ routes, achievements }));
+		dispatch(hydrateStore({ routes, achievements, pieces }));
 	}, []);
 
 	useEffect(() => {
