@@ -217,6 +217,7 @@ const links = [
 ];
 
 function Contact() {
+	const [isDisabled, setIsDisabled] = useState(false);
 	const { dispatch } = useContext(AppContext);
 	const [linkVisibility, setLinkVisibility] = useState({
 		email: false,
@@ -241,6 +242,7 @@ function Contact() {
 
 	async function handleSubmit(event) {
 		event.preventDefault();
+		setIsDisabled(true);
 		const res = await fetch('/api/form', {
 			method: 'POST',
 			headers: {
@@ -249,9 +251,10 @@ function Contact() {
 			},
 			body: JSON.stringify(form),
 		});
+		setIsDisabled(false);
 		if (res.ok) {
 			setForm({ name: '', email: '', organization: '', message: '' });
-			dispatch(addAchievement('submission'));
+			dispatch(addAchievement('chatterer'));
 			router.push('/contact');
 		}
 	}
@@ -331,7 +334,11 @@ function Contact() {
 						/>
 					</div>
 					<div className='mt-4 flex items-center'>
-						<button className='btn mr-auto' type='submit'>
+						<button
+							className='btn disabled:btn-disabled mr-auto transition-all duration-200 ease-in-out'
+							type='submit'
+							disabled={isDisabled}
+						>
 							Submit
 						</button>
 						<p className='text-gray-500 text-sm text-opacity-70'>
