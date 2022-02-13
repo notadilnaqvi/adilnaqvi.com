@@ -2,8 +2,8 @@ import Image from 'next/image';
 import { useContext } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
-import { AppContext } from 'context';
-import { addChessPiece } from 'store';
+import { AppContext } from '@/context';
+import { addChessPiece } from '@/store';
 
 function ChessPiece({ name }) {
 	const { state, dispatch } = useContext(AppContext);

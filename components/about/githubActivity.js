@@ -1,7 +1,7 @@
 import useSWR from 'swr';
 import Image from 'next/image';
 
-import { calcTimeAgo, fetcher } from 'util';
+import { calcTimeAgo, fetcher } from '@/utils';
 
 function GithubActivity() {
 	const { data, error } = useSWR('/api/github', fetcher);

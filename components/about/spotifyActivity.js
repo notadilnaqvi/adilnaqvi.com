@@ -1,7 +1,7 @@
 import useSWR from 'swr';
 import Image from 'next/image';
 
-import { calcTimeAgo, fetcher } from 'util';
+import { calcTimeAgo, fetcher } from '@/utils';
 
 function SpotifyActivity() {
 	const { data, error } = useSWR('/api/spotify', fetcher);

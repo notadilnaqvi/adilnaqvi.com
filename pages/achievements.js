@@ -1,8 +1,8 @@
 import Link from 'next/link';
+import { useContext } from 'react';
 import { motion } from 'framer-motion';
 
-import { useContext } from 'react';
-import { AppContext } from 'context';
+import { AppContext } from '@/context';
 
 const achievementsData = [
 	{
