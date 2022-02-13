@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
-import GithubActivity from '../components/about/githubActivity';
-import LichessActivity from '../components/about/lichessActivity';
-import SpotifyActivity from '../components/about/spotifyActivity';
-import TwitterActivity from '../components/about/twitterActivity';
+
+import GithubActivity from 'components/about/githubActivity';
+import LichessActivity from 'components/about/lichessActivity';
+import SpotifyActivity from 'components/about/spotifyActivity';
+import TwitterActivity from 'components/about/twitterActivity';
 
 const variants = {
 	initial: {

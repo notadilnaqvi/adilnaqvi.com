@@ -1,10 +1,11 @@
-import { useEffect, useMemo, useReducer } from 'react';
-import '../styles/global.css';
-import Layout from '../components/layout/layout';
-import { Provider } from '../context';
-import { addRoute, hydrateStore, initialState, reducer } from '../store';
-import Head from 'next/head';
 import { useRouter } from 'next/dist/client/router';
+import { useEffect, useMemo, useReducer } from 'react';
+
+import 'styles/global.css';
+import Head from 'next/head';
+import { Provider } from 'context';
+import Layout from 'components/layout/layout';
+import { addRoute, hydrateStore, initialState, reducer } from 'store';
 
 // Hello
 // Here's the flag: https://adilnaqvi.com/hacked

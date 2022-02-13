@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+
 import { useContext } from 'react';
-import { AppContext } from '../context';
-import ChessPiece from '../components/chessPiece';
+import { AppContext } from 'context';
 
 const achievementsData = [
 	{

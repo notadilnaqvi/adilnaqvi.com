@@ -1,17 +1,9 @@
-import { useContext } from 'react';
-import { AppContext } from '../context';
-import { addChessPiece } from '../store';
 import Image from 'next/image';
+import { useContext } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
-const variants = {
-	initial: {
-		opacity: 0,
-	},
-	animate: {
-		opacity: 1,
-	},
-};
+import { AppContext } from 'context';
+import { addChessPiece } from 'store';
 
 function ChessPiece({ name }) {
 	const { state, dispatch } = useContext(AppContext);

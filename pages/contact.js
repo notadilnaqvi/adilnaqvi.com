@@ -1,9 +1,10 @@
+import { useRouter } from 'next/dist/client/router';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useContext, useEffect, useState } from 'react';
-import { useRouter } from 'next/dist/client/router';
-import { AppContext } from '../context';
-import { addAchievement } from '../store';
-import ChessPiece from '../components/chessPiece';
+
+import { AppContext } from 'context';
+import { addAchievement } from 'store';
+import ChessPiece from 'components/chessPiece';
 
 const variants = {
 	initial: {

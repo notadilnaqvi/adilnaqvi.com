@@ -1,6 +1,7 @@
 import useSWR from 'swr';
 import Image from 'next/image';
-import { calcTimeAgo, fetcher } from '../../util.js';
+
+import { calcTimeAgo, fetcher } from 'util';
 
 function LichessActivity() {
 	const { data, error } = useSWR('/api/lichess', fetcher);
