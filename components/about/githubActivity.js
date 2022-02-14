@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { calcTimeAgo, fetcher } from '@/utils';
 
 function GithubActivity() {
-	const { data, error } = useSWR('/api/github', fetcher);
+	let { data, error } = useSWR('/api/github', fetcher);
 
 	if (!data || error) {
 		return (
