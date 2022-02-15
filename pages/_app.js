@@ -47,7 +47,7 @@ function MyApp({ Component, pageProps }) {
 		<Provider value={value}>
 			<Head>
 				<title>{Component.title}</title>
-				<link rel='shortcut icon' href='/logo.ico' />
+				<link rel='shortcut icon' href='/favicon.ico' />
 			</Head>
 			<Layout>
 				<Component {...pageProps} />
