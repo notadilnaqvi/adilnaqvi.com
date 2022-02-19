@@ -37,7 +37,9 @@ function About() {
 				className='w-full'
 				id='what-am-i-upto'
 			>
-				<h1 className='text-2xl text-gray-700 mb-8'>What I'm upto</h1>
+				<h1 className='text-2xl text-gray-700 mb-8'>
+					What I&apos;m upto
+				</h1>
 				<div className='flex flex-col space-y-4'>
 					<GithubActivity />
 					<TwitterActivity />
@@ -51,7 +53,7 @@ function About() {
 				id='what-am-i-reading'
 			>
 				<h1 className='text-2xl text-gray-700 mb-8'>
-					What I'm reading
+					What I&apos;m reading
 				</h1>
 				<div className='flex space-y-4'>
 					<img
@@ -69,7 +71,7 @@ function About() {
 				id='what-am-i-watching'
 			>
 				<h1 className='text-2xl text-gray-700 mb-8'>
-					What I'm watching
+					What I&apos;m watching
 				</h1>
 				<div className='flex space-x-4'>
 					<img

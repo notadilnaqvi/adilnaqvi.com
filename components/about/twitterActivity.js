@@ -29,8 +29,8 @@ function TwitterActivity() {
 								y2='20'
 								gradientUnits='userSpaceOnUse'
 							>
-								<stop stop-color='#00A2F3' />
-								<stop offset='1' stop-color='#0687C7' />
+								<stop stopColor='#00A2F3' />
+								<stop offset='1' stopColor='#0687C7' />
 							</linearGradient>
 						</defs>
 					</svg>
@@ -68,8 +68,8 @@ function TwitterActivity() {
 							y2='20'
 							gradientUnits='userSpaceOnUse'
 						>
-							<stop stop-color='#00A2F3' />
-							<stop offset='1' stop-color='#0687C7' />
+							<stop stopColor='#00A2F3' />
+							<stop offset='1' stopColor='#0687C7' />
 						</linearGradient>
 					</defs>
 				</svg>

@@ -29,8 +29,8 @@ function GithubActivity() {
 								y2='22.3214'
 								gradientUnits='userSpaceOnUse'
 							>
-								<stop stop-color='#4E4E4E' />
-								<stop offset='1' stop-color='#606060' />
+								<stop stopColor='#4E4E4E' />
+								<stop offset='1' stopColor='#606060' />
 							</linearGradient>
 						</defs>
 					</svg>
@@ -81,8 +81,8 @@ function GithubActivity() {
 									y2='22.3214'
 									gradientUnits='userSpaceOnUse'
 								>
-									<stop stop-color='#4E4E4E' />
-									<stop offset='1' stop-color='#606060' />
+									<stop stopColor='#4E4E4E' />
+									<stop offset='1' stopColor='#606060' />
 								</linearGradient>
 							</defs>
 						</svg>
@@ -129,8 +129,8 @@ function GithubActivity() {
 									y2='22.3214'
 									gradientUnits='userSpaceOnUse'
 								>
-									<stop stop-color='#4E4E4E' />
-									<stop offset='1' stop-color='#606060' />
+									<stop stopColor='#4E4E4E' />
+									<stop offset='1' stopColor='#606060' />
 								</linearGradient>
 							</defs>
 						</svg>
@@ -169,8 +169,8 @@ function GithubActivity() {
 										y2='22.3214'
 										gradientUnits='userSpaceOnUse'
 									>
-										<stop stop-color='#4E4E4E' />
-										<stop offset='1' stop-color='#606060' />
+										<stop stopColor='#4E4E4E' />
+										<stop offset='1' stopColor='#606060' />
 									</linearGradient>
 								</defs>
 							</svg>
@@ -214,8 +214,8 @@ function GithubActivity() {
 										y2='22.3214'
 										gradientUnits='userSpaceOnUse'
 									>
-										<stop stop-color='#4E4E4E' />
-										<stop offset='1' stop-color='#606060' />
+										<stop stopColor='#4E4E4E' />
+										<stop offset='1' stopColor='#606060' />
 									</linearGradient>
 								</defs>
 							</svg>
@@ -253,8 +253,8 @@ function GithubActivity() {
 									y2='22.3214'
 									gradientUnits='userSpaceOnUse'
 								>
-									<stop stop-color='#4E4E4E' />
-									<stop offset='1' stop-color='#606060' />
+									<stop stopColor='#4E4E4E' />
+									<stop offset='1' stopColor='#606060' />
 								</linearGradient>
 							</defs>
 						</svg>
@@ -291,8 +291,8 @@ function GithubActivity() {
 									y2='22.3214'
 									gradientUnits='userSpaceOnUse'
 								>
-									<stop stop-color='#4E4E4E' />
-									<stop offset='1' stop-color='#606060' />
+									<stop stopColor='#4E4E4E' />
+									<stop offset='1' stopColor='#606060' />
 								</linearGradient>
 							</defs>
 						</svg>
@@ -340,8 +340,8 @@ function GithubActivity() {
 									y2='22.3214'
 									gradientUnits='userSpaceOnUse'
 								>
-									<stop stop-color='#4E4E4E' />
-									<stop offset='1' stop-color='#606060' />
+									<stop stopColor='#4E4E4E' />
+									<stop offset='1' stopColor='#606060' />
 								</linearGradient>
 							</defs>
 						</svg>
@@ -390,8 +390,8 @@ function GithubActivity() {
 									y2='22.3214'
 									gradientUnits='userSpaceOnUse'
 								>
-									<stop stop-color='#4E4E4E' />
-									<stop offset='1' stop-color='#606060' />
+									<stop stopColor='#4E4E4E' />
+									<stop offset='1' stopColor='#606060' />
 								</linearGradient>
 							</defs>
 						</svg>
@@ -440,8 +440,8 @@ function GithubActivity() {
 									y2='22.3214'
 									gradientUnits='userSpaceOnUse'
 								>
-									<stop stop-color='#4E4E4E' />
-									<stop offset='1' stop-color='#606060' />
+									<stop stopColor='#4E4E4E' />
+									<stop offset='1' stopColor='#606060' />
 								</linearGradient>
 							</defs>
 						</svg>
@@ -490,8 +490,8 @@ function GithubActivity() {
 									y2='22.3214'
 									gradientUnits='userSpaceOnUse'
 								>
-									<stop stop-color='#4E4E4E' />
-									<stop offset='1' stop-color='#606060' />
+									<stop stopColor='#4E4E4E' />
+									<stop offset='1' stopColor='#606060' />
 								</linearGradient>
 							</defs>
 						</svg>
@@ -537,8 +537,8 @@ function GithubActivity() {
 									y2='22.3214'
 									gradientUnits='userSpaceOnUse'
 								>
-									<stop stop-color='#4E4E4E' />
-									<stop offset='1' stop-color='#606060' />
+									<stop stopColor='#4E4E4E' />
+									<stop offset='1' stopColor='#606060' />
 								</linearGradient>
 							</defs>
 						</svg>
@@ -574,8 +574,8 @@ function GithubActivity() {
 									y2='22.3214'
 									gradientUnits='userSpaceOnUse'
 								>
-									<stop stop-color='#4E4E4E' />
-									<stop offset='1' stop-color='#606060' />
+									<stop stopColor='#4E4E4E' />
+									<stop offset='1' stopColor='#606060' />
 								</linearGradient>
 							</defs>
 						</svg>
