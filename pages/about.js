@@ -30,7 +30,7 @@ function About() {
 			variants={stagger}
 			initial='initial'
 			animate='animate'
-			className='flex flex-col pt-16 space-y-8'
+			className='flex flex-col pt-16 space-y-16'
 		>
 			<motion.section
 				variants={variants}
