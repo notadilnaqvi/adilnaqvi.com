@@ -9,4 +9,13 @@ module.exports = withPWA({
 		disable: process.env.NODE_ENV === 'development',
 	},
 	reactStrictMode: true,
+	async redirects() {
+		return [
+			{
+				source: '/uses',
+				destination: '/about#using',
+				permanent: true,
+			},
+		];
+	},
 });

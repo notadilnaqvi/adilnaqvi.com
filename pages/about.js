@@ -32,11 +32,7 @@ function About() {
 			animate='animate'
 			className='flex flex-col pt-16 space-y-16'
 		>
-			<motion.section
-				variants={variants}
-				className='w-full'
-				id='what-am-i-upto'
-			>
+			<motion.section variants={variants} className='w-full' id='upto'>
 				<h1 className='text-2xl text-gray-700 mb-8'>
 					What I&apos;m upto
 				</h1>
@@ -47,17 +43,13 @@ function About() {
 					<LichessActivity />
 				</div>
 			</motion.section>
-			<motion.section
-				variants={variants}
-				className='w-full'
-				id='what-am-i-reading'
-			>
+			<motion.section variants={variants} className='w-full' id='reading'>
 				<h1 className='text-2xl text-gray-700 mb-8'>
 					What I&apos;m reading
 				</h1>
 				<div className='flex space-y-4'>
 					<img
-						className='rounded-sm'
+						className='rounded-sm hover:bg-red-500'
 						src='/assets/tgost.webp'
 						width='150'
 						height='200'
@@ -68,7 +60,7 @@ function About() {
 			<motion.section
 				variants={variants}
 				className='w-full'
-				id='what-am-i-watching'
+				id='watching'
 			>
 				<h1 className='text-2xl text-gray-700 mb-8'>
 					What I&apos;m watching
@@ -88,6 +80,53 @@ function About() {
 						height='200'
 						alt='Adil Naqvi'
 					/>
+				</div>
+			</motion.section>
+			<motion.section variants={variants} className='w-full' id='using'>
+				<h1 className='text-2xl text-gray-700 mb-8'>
+					What I&apos;m using
+				</h1>
+				<div className='flex flex-col space-y-4'>
+					<div className='flex items-center space-x-4'>
+						<span>&#128187;</span>
+						<p className='text-gray-700'>
+							Dell Inspiron 15 3000 - Intel Core i7 (10th Gen) -
+							512 GB NVME - 16 GB DDR4
+						</p>
+					</div>
+					<div className='flex items-center space-x-4'>
+						<span>&#9881;&#65039;</span>
+						<p className='text-gray-700'>
+							Ubuntu 20.04 LTS with Qogir Dark theme
+						</p>
+					</div>
+					<div className='flex items-center space-x-4'>
+						<span>&#128221;</span>
+						<p className='text-gray-700'>
+							WebStorm &amp; PyCharm with VSCode key bindings
+						</p>
+					</div>
+					<div className='flex items-center space-x-4'>
+						<span>&#128104;&#8205;&#128187;</span>
+						<p className='text-gray-700'>
+							Alacritty + Tmux + Bash (
+							<a
+								className='lnk'
+								href='https://github.com/notadilnaqvi/uses/tree/main/dotfiles'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								dotfiles
+							</a>
+							)
+						</p>
+					</div>
+					<div className='flex items-center space-x-4'>
+						<span>&#128396;</span>
+						<p className='text-gray-700'>
+							Figma for light UI &amp; graphics needs
+						</p>
+					</div>
 				</div>
 			</motion.section>
 			<motion.section
