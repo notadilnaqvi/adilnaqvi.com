@@ -8,7 +8,7 @@ const achievementsData = [
 	{
 		key: 'adventurer',
 		title: 'Adventurer',
-		text: 'Visit the achievements page',
+		text: 'Visit the :) page',
 	},
 	{
 		key: 'explorer',
@@ -61,9 +61,10 @@ const variants = {
 	},
 };
 
-function Achievements() {
+function Fun() {
 	const { state } = useContext(AppContext);
 	const { achievements, pieces } = state;
+
 	return (
 		<motion.section
 			initial='initial'
@@ -71,14 +72,15 @@ function Achievements() {
 			variants={variants}
 			className='w-full pt-16'
 		>
-			<h1 className='text-2xl text-gray-700 mb-8'>Achievements</h1>
+			<h1 className='text-2xl text-gray-700 mb-8'>:)</h1>
 			<p className='text-base text-gray-500 mb-8'>
 				Hello, person-from-the-interwebs!
 			</p>
 			<p className='text-base text-gray-500 mb-8'>
-				There are 8<span className='italic'> achievements </span>
-				available on this website. They start off easy and get
-				progressively harder. Try and get &apos;em all.
+				Who says browsing portfolios has to be just that? There are
+				several easter-eggs hidden all across this website. Find them to
+				unlock achievements. Most of them are easy. Others may require
+				some effort.
 			</p>
 			<p className='text-base text-gray-500 mb-8'>
 				You can always&nbsp;
@@ -120,8 +122,7 @@ function Achievements() {
 				})}
 			</div>
 			<p className='text-base text-gray-500 mt-16'>
-				<span className='italic'>Achievements</span> were heavily
-				inspired by&nbsp;
+				Inspired by&nbsp;
 				<a
 					href='https://www.maxlaumeister.com/'
 					target='_blank'
@@ -132,10 +133,13 @@ function Achievements() {
 				</a>
 				. Go check him out.
 			</p>
+			<p className='text-base text-gray-400 mt-8'>
+				Some achievements are only unlockable on a desktop browser.
+			</p>
 		</motion.section>
 	);
 }
 
-Achievements.title = 'Achievements';
+Fun.title = ':)';
 
-export default Achievements;
+export default Fun;

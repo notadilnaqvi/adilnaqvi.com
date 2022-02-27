@@ -8,7 +8,7 @@ import Layout from '@/components/layout/layout';
 import { addRoute, hydrateStore, initialState, reducer } from '@/store';
 
 // Hello
-// Here's the flag: https://adilnaqvi.com/hacked
+// Here's the flag: https://adilnaqvi.com/pole
 // Now shoo!
 
 function MyApp({ Component, pageProps }) {

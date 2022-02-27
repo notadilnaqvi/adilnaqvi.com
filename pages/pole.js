@@ -15,7 +15,7 @@ const variants = {
 	},
 };
 
-function Hacked() {
+function Pole() {
 	return (
 		<motion.section
 			initial='initial'
@@ -23,20 +23,20 @@ function Hacked() {
 			variants={variants}
 			className='w-full pt-16'
 		>
-			<h1 className='text-2xl text-gray-700 mb-8'>Hacked</h1>
+			<h1 className='text-2xl text-gray-700 mb-8'>Pole</h1>
 			<p className='text-base text-gray-500 mb-8'>
 				Yay! You found the flag
 			</p>
 			<p className='text-base text-gray-500 mb-8'>
 				Now go check the achievement you just got
 			</p>
-			<Link href='/achievements' passHref>
+			<Link href='/fun' passHref>
 				<button className='btn'>Check achievements</button>
 			</Link>
 		</motion.section>
 	);
 }
 
-Hacked.title = 'Hacked';
+Pole.title = 'Pole';
 
-export default Hacked;
+export default Pole;

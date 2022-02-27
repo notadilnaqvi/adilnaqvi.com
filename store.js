@@ -41,7 +41,7 @@ export const reducer = (state, action) => {
 				_achievements = [..._achievements, 'explorer'];
 			}
 
-			if (action.payload.route === '/achievements') {
+			if (action.payload.route === '/fun') {
 				_achievements = [..._achievements, 'adventurer'];
 			}
 
