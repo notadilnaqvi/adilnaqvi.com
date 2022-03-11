@@ -15,28 +15,38 @@ function MyApp({ Component, pageProps }) {
 	const router = useRouter();
 	const [state, dispatch] = useReducer(reducer, initialState);
 
+	// NOTE: The order of the following useEffects is important (found out the hard way)
+
+	// Get data from local storage and hydrate the store on each render
 	useEffect(() => {
 		const _routes = window.localStorage.getItem('routes');
-		const _achievements = window.localStorage.getItem('achievements');
 		const _pieces = window.localStorage.getItem('pieces');
+		const _achievements = window.localStorage.getItem('achievements');
 
 		const routes = _routes ? JSON.parse(_routes) : initialState.routes;
+		const pieces = _pieces ? JSON.parse(_pieces) : initialState.pieces;
 		const achievements = _achievements
 			? JSON.parse(_achievements)
 			: initialState.achievements;
-		const pieces = _pieces ? JSON.parse(_pieces) : initialState.pieces;
 
 		dispatch(hydrateStore({ routes, achievements, pieces }));
 	}, []);
 
+	// Add the current route to visited routes
 	useEffect(() => {
 		dispatch(addRoute(router.pathname));
 	}, [router.pathname]);
 
+	// Update the local storage whenever the store state changes
 	useEffect(() => {
-		for (const key in initialState) {
-			window.localStorage.setItem(key, JSON.stringify(state[key]));
-		}
+		const { routes, pieces, achievements } = state;
+
+		window.localStorage.setItem('routes', JSON.stringify(routes));
+		window.localStorage.setItem('pieces', JSON.stringify(pieces));
+		window.localStorage.setItem(
+			'achievements',
+			JSON.stringify(achievements)
+		);
 	}, [state]);
 
 	const value = useMemo(() => {

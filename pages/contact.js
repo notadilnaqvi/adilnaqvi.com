@@ -218,8 +218,9 @@ const links = [
 ];
 
 function Contact() {
-	const [isDisabled, setIsDisabled] = useState(false);
+	const router = useRouter();
 	const { dispatch } = useContext(AppContext);
+	const [isDisabled, setIsDisabled] = useState(false);
 	const [linkVisibility, setLinkVisibility] = useState({
 		email: false,
 		github: false,
@@ -227,9 +228,11 @@ function Contact() {
 		twitter: false,
 		lichess: false,
 	});
-	const router = useRouter();
+
 	const { query } = router;
 
+	// Can't let the following be initialized as undefined as that will make
+	// the form inputs uncontrolled. We use empty strings instead
 	const name = query.n ?? '';
 	const email = query.e ?? '';
 	const organization = query.o ?? '';
@@ -237,6 +240,7 @@ function Contact() {
 
 	const [form, setForm] = useState({ name, email, organization, message });
 
+	// Auto-fill the form based on query params
 	useEffect(() => {
 		setForm({ name, email, organization, message });
 	}, [name, email, organization, message]);
@@ -254,8 +258,10 @@ function Contact() {
 		});
 		setIsDisabled(false);
 		if (res.ok) {
-			setForm({ name: '', email: '', organization: '', message: '' });
 			dispatch(addAchievement('chatterer'));
+			// Reset form
+			setForm({ name: '', email: '', organization: '', message: '' });
+			// Clear query params in the URL if any
 			router.push('/contact');
 		}
 	}
@@ -265,6 +271,10 @@ function Contact() {
 			...oldForm,
 			[event.target.name]: event.target.value,
 		}));
+	}
+
+	function toggleLinkVisibility(id) {
+		setLinkVisibility(prev => ({ ...prev, [id]: !prev[id] }));
 	}
 
 	const localeString = new Date().toLocaleTimeString('en-US', {
@@ -278,9 +288,6 @@ function Contact() {
 		' ' +
 		localeString.split(' ')[1];
 
-	function toggleLinkVisibility(id) {
-		setLinkVisibility(prev => ({ ...prev, [id]: !prev[id] }));
-	}
 	return (
 		<motion.div
 			variants={stagger}
