@@ -32,6 +32,42 @@ function About() {
 			animate='animate'
 			className='flex flex-col pt-16 space-y-16'
 		>
+			<motion.section variants={variants} className='w-full' id='me'>
+				<h1 className='text-2xl text-gray-700 mb-8'>About me</h1>
+				<div className='flex flex-col space-y-4'>
+					<div className='flex items-center space-x-4'>
+						<span>🤸‍♂️</span>
+						<p className='text-gray-700'>Hi, I'm Adil</p>
+					</div>
+					<div className='flex items-center space-x-4'>
+						<span>👨‍💻</span>
+						<p className='text-gray-700'>
+							I'm working as a software developer over at&nbsp;
+							<a
+								className='lnk'
+								href='https://teamo.io'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								Teamo
+							</a>
+						</p>
+					</div>
+					<div className='flex items-center space-x-4'>
+						<span>🇵🇰</span>
+						<p className='text-gray-700'>
+							I'm based in Lahore, Pakistan
+						</p>
+					</div>
+					<div className='flex items-center space-x-4'>
+						<span>🙂</span>
+						<p className='text-gray-700'>
+							I like chess, Age of Empires II, Linux, Modern
+							Family, and mutton biryani
+						</p>
+					</div>
+				</div>
+			</motion.section>
 			<motion.section variants={variants} className='w-full' id='upto'>
 				<h1 className='text-2xl text-gray-700 mb-8'>
 					What I&apos;m upto
@@ -129,11 +165,7 @@ function About() {
 					</div>
 				</div>
 			</motion.section>
-			<motion.section
-				variants={variants}
-				className='w-full'
-				id='about-this-website'
-			>
+			<motion.section variants={variants} className='w-full' id='website'>
 				<h1 className='text-2xl text-gray-700 mb-8'>
 					About this website
 				</h1>
