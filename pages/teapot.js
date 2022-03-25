@@ -24,7 +24,7 @@ function Error418() {
 			className='w-full pt-16'
 		>
 			<h1 className='text-2xl text-gray-700'>Error 418</h1>
-			<p className='text-base text-gray-500 mb-8'>I&apos;m a teapot</p>
+			<p className='text-base text-gray-500 mb-8'>I'm a teapot</p>
 			<p className='text-base text-gray-500 mb-8'>
 				The requested entity body is short and stout. Tip me over and
 				pour me out.

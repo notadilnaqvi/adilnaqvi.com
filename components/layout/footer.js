@@ -99,7 +99,7 @@ function Footer() {
 				<div className='flex flex-col md:place-items-start items-center'>
 					<p>Thanks for stopping by</p>
 					<p>
-						Made with <span className='text-red-400'>&#10084;</span>
+						Made with <span className='text-red-400'>❤</span>
 						&nbsp;in Next.js
 					</p>
 				</div>

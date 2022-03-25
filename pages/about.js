@@ -69,9 +69,7 @@ function About() {
 				</div>
 			</motion.section>
 			<motion.section variants={variants} className='w-full' id='upto'>
-				<h1 className='text-2xl text-gray-700 mb-8'>
-					What I&apos;m upto
-				</h1>
+				<h1 className='text-2xl text-gray-700 mb-8'>What I'm upto</h1>
 				<div className='flex flex-col space-y-4'>
 					<GithubActivity />
 					<TwitterActivity />
@@ -81,7 +79,7 @@ function About() {
 			</motion.section>
 			<motion.section variants={variants} className='w-full' id='reading'>
 				<h1 className='text-2xl text-gray-700 mb-8'>
-					What I&apos;m reading
+					What I'm reading
 				</h1>
 				<div className='flex space-y-4'>
 					<img
@@ -99,7 +97,7 @@ function About() {
 				id='watching'
 			>
 				<h1 className='text-2xl text-gray-700 mb-8'>
-					What I&apos;m watching
+					What I'm watching
 				</h1>
 				<div className='flex space-x-4'>
 					<img
@@ -119,31 +117,29 @@ function About() {
 				</div>
 			</motion.section>
 			<motion.section variants={variants} className='w-full' id='using'>
-				<h1 className='text-2xl text-gray-700 mb-8'>
-					What I&apos;m using
-				</h1>
+				<h1 className='text-2xl text-gray-700 mb-8'>What I'm using</h1>
 				<div className='flex flex-col space-y-4'>
 					<div className='flex items-center space-x-4'>
-						<span>&#128187;</span>
+						<span>💻</span>
 						<p className='text-gray-700'>
 							Dell Inspiron 15 3000 - Intel Core i7 (10th Gen) -
 							512 GB NVME - 16 GB DDR4
 						</p>
 					</div>
 					<div className='flex items-center space-x-4'>
-						<span>&#9881;&#65039;</span>
+						<span>⚙️</span>
 						<p className='text-gray-700'>
 							Ubuntu 20.04 LTS with Qogir Dark theme
 						</p>
 					</div>
 					<div className='flex items-center space-x-4'>
-						<span>&#128221;</span>
+						<span>📝</span>
 						<p className='text-gray-700'>
 							WebStorm &amp; PyCharm with VSCode key bindings
 						</p>
 					</div>
 					<div className='flex items-center space-x-4'>
-						<span>&#128104;&#8205;&#128187;</span>
+						<span>👨‍💻</span>
 						<p className='text-gray-700'>
 							Alacritty + Tmux + Bash (
 							<a
@@ -158,7 +154,7 @@ function About() {
 						</p>
 					</div>
 					<div className='flex items-center space-x-4'>
-						<span>&#128396;</span>
+						<span>🖌</span>
 						<p className='text-gray-700'>
 							Figma for light UI &amp; graphics needs
 						</p>

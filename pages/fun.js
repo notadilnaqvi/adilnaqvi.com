@@ -92,7 +92,7 @@ function Fun() {
 				>
 					<a className='lnk'>ask for hints</a>
 				</Link>
-				&nbsp;if you&apos;re stuck (or impatient).
+				&nbsp;if you're stuck (or impatient).
 			</p>
 			<p className='text-base text-gray-500 mb-8'>
 				Good luck and have fun &#10024;

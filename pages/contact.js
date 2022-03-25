@@ -350,7 +350,7 @@ function Contact() {
 							Submit
 						</button>
 						<p className='text-gray-500 text-sm text-opacity-70'>
-							It&apos;s currently {currentTime} in my city
+							It's currently {currentTime} in my city
 						</p>
 					</div>
 				</form>
