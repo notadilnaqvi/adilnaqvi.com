@@ -28,3 +28,7 @@ select,
 a {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
+.skip-to-content {
+	@apply absolute px-4 py-3 transition-transform duration-200 transform -translate-y-12 focus:translate-y-3 bg-th-primary text-white px-3 py-1 font-semibold;
+}

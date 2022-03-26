@@ -11,6 +11,9 @@ function Header() {
 	return (
 		<header className='fixed w-full flex justify-center h-14 bg-gradient-to-r from-th-primary to-th-secondary tracking-widest'>
 			<nav className='max-w-[1024px] w-full flex h-full font-medium px-6'>
+				<a href='#content' className='skip-to-content'>
+					Skip to content
+				</a>
 				{/* Logo */}
 				<div className='h-full mr-auto'>
 					<Link href='/'>
