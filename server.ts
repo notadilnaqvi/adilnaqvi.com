@@ -17,11 +17,14 @@ Deno.cron("Update last updated", "* */1 * * *", async () => {
 
 async function generateIndexHtml() {
   const currentTime = new Date().toLocaleString();
+  console.log("Reading .template.html now...");
   const htmlTemplate = await Deno.readTextFile(
     Deno.cwd() + "/static/.template.html",
   );
+  console.log("Successfully read from .template.html...");
 
   const indexHtml = htmlTemplate.replace("{{ LAST_UPDATED }}", currentTime);
 
+  console.log("Writing to index.html now...");
   await Deno.writeTextFile(Deno.cwd() + "/static/index.html", indexHtml);
 }
