@@ -1,7 +1,7 @@
 import { serveDir } from "https://deno.land/std@0.224.0/http/file_server.ts";
 
 // Create the initial index.html
-// await generateIndexHtml();
+await generateIndexHtml();
 
 // Serve the static files
 Deno.serve(async (req) => {
@@ -15,7 +15,7 @@ Deno.serve(async (req) => {
 //   await generateIndexHtml();
 // });
 
-async function _generateIndexHtml() {
+async function generateIndexHtml() {
   const currentTime = new Date().toLocaleString();
   console.log("[debug] Reading", Deno.cwd() + "/static/.template.html", "now...");
   const htmlTemplate = await Deno.readTextFile(
