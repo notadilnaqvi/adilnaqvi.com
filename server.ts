@@ -1,24 +1,27 @@
 import { serveDir } from "https://deno.land/std@0.224.0/http/file_server.ts";
 
-async function updateIndexHtml() {
-  const indexHtmlText = await Deno.readTextFile("index.html");
+// Create the initial index.html
+await generateIndexHtml();
 
-  const currentTime = new Date().toLocaleString();
-  
-  const updatedIndexHtmlText = indexHtmlText.replace(
-    "{{ LAST_UPDATED }}",
-    currentTime,
-  );
-
-  await Deno.writeTextFile("index.html", updatedIndexHtmlText);
-}
-
+// Serve the static files
 Deno.serve(async (req) => {
   return await serveDir(req, {
-    fsRoot: "./static/",
+    fsRoot: Deno.cwd() + "/static/",
   });
 });
 
-Deno.cron("Update last updated", "*/10 * * * *", async () => {
-  await updateIndexHtml();
+// Generate index.html every minute with latest data
+Deno.cron("Update last updated", "* */1 * * *", async () => {
+  await generateIndexHtml();
 });
+
+async function generateIndexHtml() {
+  const currentTime = new Date().toLocaleString();
+  const htmlTemplate = await Deno.readTextFile(
+    Deno.cwd() + "/static/.template.html",
+  );
+
+  const indexHtml = htmlTemplate.replace("{{ LAST_UPDATED }}", currentTime);
+
+  await Deno.writeTextFile(Deno.cwd() + "/static/index.html", indexHtml);
+}
