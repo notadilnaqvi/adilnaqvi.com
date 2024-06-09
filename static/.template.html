@@ -16,19 +16,13 @@
       <meta property="og:image" content="https://adilnaqvi.com/og_v4.webp" />
       <meta property="og:title" content="Adil's webpage" />
       <meta property="og:url" content="https://adilnaqvi.com/" />
-      <meta
-        property="og:description"
-        content="Hello, I'm Adil. I make websites"
-      />
+      <meta property="og:description" content="Hello, I'm Adil. I make websites" />
 
       <meta name="twitter:image" content="https://adilnaqvi.com/og_v4.webp" />
       <meta name="twitter:title" content="Adil's webpage" />
       <meta name="twitter:creator" content="@notadilnaqvi" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta
-        name="twitter:description"
-        content="Hello, I'm Adil. I make websites"
-      />
+      <meta name="twitter:description" content="Hello, I'm Adil. I make websites" />
       <meta property="twitter:domain" content="adilnaqvi.com" />
       <meta property="twitter:url" content="https://adilnaqvi.com/" />
 
@@ -49,22 +43,14 @@
   <body style="font-family: serif">
     <main>
       <h1>Welcome to Adil's webpage</h1>
-      <img
-        height="128"
-        width="128"
-        src="sip.webp"
-        alt="Adil in some restaurant sipping from a martini glass"
-      />
+      <img height="128" width="128" src="sip.webp" alt="Adil in some restaurant sipping from a martini glass" />
       <section>
         <h2>About me</h2>
         <ul>
           <li>Hello, I'm Adil</li>
           <li>I make websites</li>
           <li>I'm based in Islamabad</li>
-          <li>
-            I like beef pulao, Modern Family, Stardew Valley, and graphics
-            designing
-          </li>
+          <li>I like beef pulao, Modern Family, Stardew Valley, and graphics designing</li>
         </ul>
       </section>
       <section>
@@ -88,62 +74,36 @@
           </li>
           <li>
             See the kinda code I write &ndash;
-            <a
-              href="https://github.com/notadilnaqvi"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              github.com/notadilnaqvi
-            </a>
+            <a href="https://github.com/notadilnaqvi" rel="noopener noreferrer" target="_blank"> github.com/notadilnaqvi </a>
           </li>
           <li>
             See me Tweet about code and chess &ndash;
-            <a
-              href="https://twitter.com/notadilnaqvi"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              twitter.com/notadilnaqvi
-            </a>
+            <a href="https://twitter.com/notadilnaqvi" rel="noopener noreferrer" target="_blank"> twitter.com/notadilnaqvi </a>
           </li>
           <li>
             See me be mediocre at chess &ndash;
-            <a
-              href="https://www.chess.com/member/notadilnaqvi"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              chess.com/member/notadilnaqvi
-            </a>
+            <a href="https://www.chess.com/member/notadilnaqvi" rel="noopener noreferrer" target="_blank"> chess.com/member/notadilnaqvi </a>
           </li>
           <li>
             See work experience and education &ndash;
-            <a
-              href="https://www.linkedin.com/in/notadilnaqvi"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              linkedin.com/in/notadilnaqvi
-            </a>
+            <a href="https://www.linkedin.com/in/notadilnaqvi" rel="noopener noreferrer" target="_blank"> linkedin.com/in/notadilnaqvi </a>
           </li>
           <li>
             See some graphics design work I've done &ndash;
-            <a
-              href="https://www.behance.net/notadilnaqvi"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              behance.net/notadilnaqvi
-            </a>
+            <a href="https://www.behance.net/notadilnaqvi" rel="noopener noreferrer" target="_blank"> behance.net/notadilnaqvi </a>
           </li>
         </ul>
       </section>
       <hr />
-      <marquee behavior="alternate" direction="right">
-        Thanks for visiting :)
-      </marquee>
+      <marquee behavior="alternate" direction="right"> Thanks for visiting :) </marquee>
       <hr />
       <p>Last updated: {{ LAST_UPDATED }}</p>
     </main>
+    <script>
+      console.log("Source code: https://github.com/notadilnaqvi/adilnaqvi.com ✨");
+      if (navigator.serviceWorker) {
+        navigator.serviceWorker.register("sw.js");
+      }
+    </script>
   </body>
 </html>
